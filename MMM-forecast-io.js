@@ -256,7 +256,6 @@ Module.register("MMM-forecast-io", {
       var windSpeedUnit = "mph";
     }
 
-    console.log(currentWeather);
     windSpeed.innerHTML = " " + cardinalDirection + " " + Math.round(currentWeather.windSpeed) + "-" + Math.round(currentWeather.windGust) + windSpeedUnit;
     windSpeed.appendChild
     wind.appendChild(windSpeed);
