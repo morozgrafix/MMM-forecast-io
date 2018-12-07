@@ -24,6 +24,7 @@ Module.register("MMM-forecast-io", {
     showWind: true,
     enablePrecipitationGraph: true,
     alwaysShowPrecipitationGraph: false,
+    showDailyPrecipitationChance: true,
     precipitationGraphWidth: 400,
     precipitationFillColor: 'white',
     precipitationProbabilityThreshold: 0.1,
@@ -434,7 +435,9 @@ Module.register("MMM-forecast-io", {
 
     row.appendChild(dayTextSpan);
     row.appendChild(icon);
-    row.appendChild(dayPrecipProb);
+    if (this.config.showDailyPrecipitationChance) {
+      row.appendChild(dayPrecipProb);
+    }
     row.appendChild(forecastBarWrapper);
 
     return row;
